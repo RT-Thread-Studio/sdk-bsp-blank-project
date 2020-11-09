@@ -1,2 +1,1 @@
-VariantDir('build', '#', duplicate=0)
-SConscript('SConscript')
+print "Replace with your SConstruct"
