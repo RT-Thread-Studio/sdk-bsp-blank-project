@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?fileVersion 4.0.0?><projectDescription>
+  <name>cortex-m0</name>
   <comment />
   <projects>
 	</projects>
@@ -23,5 +24,4 @@
     <nature>org.eclipse.cdt.managedbuilder.core.managedBuildNature</nature>
     <nature>org.eclipse.cdt.managedbuilder.core.ScannerConfigNature</nature>
   </natures>
-  <name>cortex-m0</name>
 </projectDescription>
