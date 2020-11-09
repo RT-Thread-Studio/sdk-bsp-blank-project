@@ -8,18 +8,18 @@
 
 ## 添加模板代码到工程
 
-1. 以 STM32CubeMX 为例，生成一个 stm32f030-nucleo 的 MDK工程；
+1. 创建模板工程：
+
+   ![move](figures/step2.png)
+2. 添加实际开发板使用的代码，这里以 STM32CubeMX 为例，生成一个 stm32f030-nucleo 的 MDK工程；
 
 ![cubemx](figures/step1.png)
 
-2. 创建模板工程：
-
-   ![move](figures/step2.png)
 
 3. 复制 CubeMX 生成的工程目录下所有文件到 RT Studio 创建的工程目录下；
 
 
-4. 工程创建完成后，此时直接编译是无法通过的，需要修改一些配置，下面的步骤将演示如何修改配置保证工程可以编译下载。
+4. 代码添加完成后，此时直接编译是无法通过的，需要修改一些配置，下面的步骤将演示如何修改配置保证工程可以编译下载。
 
 ![com](figures/step5.png)
 
