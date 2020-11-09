@@ -1,0 +1,92 @@
+---
+yaml_version: 3
+pkg_version: 1.0.0
+pkg_vendor: RealThread
+pkg_type: Board_Support_Packages
+board:
+  name: BSP-TEMPLATE
+  version: Rev.A
+  vendor: RealThread
+  description_zh: RT-Thread Studio 板级支持包模板工程
+  description_en: RT-Thread Studio Board Support Project Template
+  small_image: []
+  large_image: []
+  sale_contact_cn: sale_contact_cn
+  sale_contact_global: sale_contact_global
+  buy_url_cn: buy_url_cn
+  buy_url_global: buy_url_global
+  price_cn: price_cn
+  price_global: price_global 
+  debugger: ST-LINk
+  debug_interface: SWD
+  emulator_machine: ''
+chip:
+  device_vendor: Other
+  family_name: 
+  series_name: 
+  sub_series_name: 
+  chip_name: 
+  rx_name: PA3
+  tx_name: PA2
+  clock_source: HSE
+  source_freq: '8000000'
+  target_freq: '480000000'
+  uart_name: UART2
+docs: 
+- file: []
+  title: 快速上手
+  category: manual
+- file: []
+  title: Datasheet
+  category: sheet
+features: 
+- xxx
+features_zh:
+- xxx
+template_projects:
+- project_name: cortex-m3
+  project_description: creat this peoject if user choose cortex-m3 template
+  project_type: bare-metal|@notUsed|@notUsed
+  builtin_files:
+  - source_path_offset: project/cortex_m3
+    target_path_offset: ''
+    files_and_folders:
+    - "*"
+  external_files: []
+example_projects: 
+- project_name: cortex-m0
+  project_description: creat this peoject if user choose cortex-m0 template
+  project_type: bare-metal|@notUsed|@notUsed
+  builtin_files:
+  - source_path_offset: project/cortex_m0
+    target_path_offset: ''
+    files_and_folders:
+    - "*"
+  external_files: []
+- project_name: cortex-m4
+  project_description: creat this peoject if user choose cortex-m4 template
+  project_type: bare-metal|@notUsed|@notUsed
+  builtin_files:
+  - source_path_offset: project/cortex_m4
+    target_path_offset: ''
+    files_and_folders:
+    - "*"
+  external_files: []
+- project_name: cortex-m7
+  project_description: creat this peoject if user choose cortex-m7 template
+  project_type: bare-metal|@notUsed|@notUsed
+  builtin_files:
+  - source_path_offset: project/cortex_m7
+    target_path_offset: ''
+    files_and_folders:
+    - "*"
+  external_files: []
+- project_name: cortex-m0-scons
+  project_description: creat this peoject if user choose cortex-m0-scons template
+  project_type: bare-metal|@notUsed|@notUsed
+  builtin_files:
+  - source_path_offset: project/cortex_m0_scons
+    target_path_offset: ''
+    files_and_folders:
+    - "*"
+  external_files: []

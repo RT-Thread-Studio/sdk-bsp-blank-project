@@ -1,0 +1,52 @@
+import os
+from os import path
+import config
+ 
+def get_srcs(src_dir, exts, recursive=False):
+    srcs = []
+    files = os.listdir(src_dir)
+    for fd in files:
+        fd_full = path.join(src_dir, fd)
+        if path.isfile(fd_full):
+            base,ext = path.splitext(fd)
+            if ext in exts:
+                srcs.append(fd_full)
+        elif path.isdir(fd_full) and recursive:
+            srcs = srcs + get_srcs(fd_full, exts, recursive)
+        else:
+            pass
+    return srcs
+ 
+env = Environment(CC=config.CC,
+                  CCFLAGS=config.CCFLAGS,
+                  CXX=config.CXX,
+                  CXXFLAGS=config.CXXFLAGS,
+                  CPPPATH=config.CPPPATH,
+                  LINK=config.LINK,
+                  LINKFLAGS=config.LDFLAGS,
+                  AS=config.AS,
+                  ASFLAGS=config.ASFLAGS,
+                  CPPDEFINES=config.CPPDEFINES,
+                  ENV=os.environ)
+env.Replace(ASCOM='$AS $ASFLAGS $CPPPATH $CPPDEFINES -c $SOURCE -o $TARGET')
+env.Replace(LINKCOM='$LINK $SOURCES $LINKFLAGS -o $TARGET')
+ 
+srcDirs = ['application', 'linkscripts']
+curDir = GetLaunchDir()
+ 
+srcs = []
+for item in os.listdir(curDir):
+    fd = path.join(curDir, item)
+    if path.isdir(fd) and item in srcDirs:
+        srcs = srcs + get_srcs(fd, ['.c', '.cpp', '.s'], True)
+ 
+for i in range(len(srcs)):
+    srcs[i] = srcs[i][len(curDir)+1:]
+ 
+t=env.Program(config.TARGET, srcs)
+env.SideEffect(config.PROJECT+'.map', t)
+# Post Action
+a1=env.AddPostAction(config.TARGET, config.OBJCOPY + ' -Oihex ' + '$TARGET ' + config.HEX_TARGET)
+a2=env.AddPostAction(config.TARGET, config.OBJCOPY + ' -Obinary -S ' + '$TARGET ' + config.BIN_TARGET)
+env.SideEffect(config.HEX_TARGET, a1)
+env.SideEffect(config.BIN_TARGET, a2)
