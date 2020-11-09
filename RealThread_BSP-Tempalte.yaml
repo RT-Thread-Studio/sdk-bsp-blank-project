@@ -71,6 +71,19 @@ example_projects:
     files_and_folders:
     - "README.md"
   external_files: []
+- project_name: cortex-m3
+  project_description: creat this peoject if user choose cortex-m3 template
+  project_type: bare-metal|@notUsed|@notUsed
+  builtin_files:
+  - source_path_offset: project/cortex_m3
+    target_path_offset: ''
+    files_and_folders:
+    - "*"
+  - source_path_offset: ""
+    target_path_offset: ''
+    files_and_folders:
+    - "README.md"
+  external_files: []  
 - project_name: cortex-m4
   project_description: creat this peoject if user choose cortex-m4 template
   project_type: bare-metal|@notUsed|@notUsed
