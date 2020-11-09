@@ -71,7 +71,7 @@ example_projects:
     files_and_folders:
     - "README.md"
   external_files: []
-- project_name: cortex-m3
+- project_name: cortex_m3
   project_description: creat this peoject if user choose cortex-m3 template
   project_type: bare-metal|@notUsed|@notUsed
   builtin_files:
@@ -97,7 +97,7 @@ example_projects:
     files_and_folders:
     - "README.md"
   external_files: []
-- project_name: cortex-m7
+- project_name: cortex_m7
   project_description: creat this peoject if user choose cortex-m7 template
   project_type: bare-metal|@notUsed|@notUsed
   builtin_files:
