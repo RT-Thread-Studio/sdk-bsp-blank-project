@@ -4,7 +4,7 @@ pkg_version: 1.0.0
 pkg_vendor: RealThread
 pkg_type: Board_Support_Packages
 board:
-  name: BSP-TEMPLATE
+  name: BLANK-PROJECT-TEMPLATE
   version: Rev.A
   vendor: RealThread
   description_zh: RT-Thread Studio 板级支持包模板工程
