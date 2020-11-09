@@ -13,7 +13,7 @@
    ![move](figures/step2.png)
 2. 添加实际开发板使用的代码，这里以 STM32CubeMX 为例，生成一个 stm32f030-nucleo 的 MDK工程；
 
-![cubemx](figures/step1.png)
+   ![cubemx](figures/step1.png)
 
 
 3. 复制 CubeMX 生成的工程目录下所有文件到 RT Studio 创建的工程目录下；
@@ -21,25 +21,25 @@
 
 4. 代码添加完成后，此时直接编译是无法通过的，需要修改一些配置，下面的步骤将演示如何修改配置保证工程可以编译下载。
 
-![com](figures/step5.png)
+   ![com](figures/step5.png)
 
 ## 忽略文件
 
 1. 工程中可能会包含有一些不需要的文件，我们需要手动忽略掉这些文件。以本次演示的工程为例：
 
-![ignore](figures/step6.png)
+   ![ignore](figures/step6.png)
 
 2. 可以看到，在 Drivers 文件目录下包含了许多暂不需要的文件，鼠标右键点击需要忽略掉的文件，选择 Resoure Configurations -> Exclude from Build：
 
-![ignore2](figures/step7.png)
+   ![ignore2](figures/step7.png)
 
 3. 点击 Debug 前面的方框，点击 OK：
 
-![ignore4](figures/step8.png)
+   ![ignore4](figures/step8.png)
 
 4. 此时工程中就看不到该文件，可以看到 RTOS 文件消失了：
 
-![ignore5](figures/step9.png)
+   ![ignore5](figures/step9.png)
 
 5. 根据以上步骤，屏蔽掉工程不需要的文件。
 
@@ -49,11 +49,11 @@
 
 2. 添加头文件路径:
 
-![step3](figures/step10.png)
+   ![step3](figures/step10.png)
 
 3. 如果头文件路径有误，会看一个黄色的感叹号，此时就要检查一下头文件的路径了：
 
-![include1](figures/step11.png)
+   ![include1](figures/step11.png)
 
 
 ## 更改硬件参数
@@ -62,7 +62,7 @@
 
 2. 修改硬件参数；
 
-![step2](figures/step12.png)
+   ![step2](figures/step12.png)
 
 ## 添加宏定义
 
@@ -70,7 +70,7 @@
 
 2. 添加宏定义；
 
-![step4](figures/step13.png)
+   ![step4](figures/step13.png)
 
 ## 添加链接库
 
@@ -78,19 +78,19 @@
 
 2. 添加链接库，添加一个 C 库为例；
 
-![step5](figures/step14.png)
+   ![step5](figures/step14.png)
 
 ## 修改链接脚本
 
 模板工程提供了默认的 eclipse 链接脚本文件，修改链接脚本路径：
 
-![link](figures/step15.png)
+   ![link](figures/step15.png)
 
 ## 编译工程
 
 以上步骤完成后，编译工程：
 
-![end](figures/step16.png)
+   ![end](figures/step16.png)
 
 如果编译产生错误，请根据错误提示进行修改。
 
