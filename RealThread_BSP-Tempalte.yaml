@@ -56,6 +56,7 @@ template_projects:
     target_path_offset: ''
     files_and_folders:
     - "README.md"
+    - "figures"
   external_files: []
 example_projects: 
 - project_name: cortex_m0
@@ -70,6 +71,7 @@ example_projects:
     target_path_offset: ''
     files_and_folders:
     - "README.md"
+    - "figures"    
   external_files: []
 - project_name: cortex_m3
   project_description: creat this peoject if user choose cortex-m3 template
@@ -83,6 +85,7 @@ example_projects:
     target_path_offset: ''
     files_and_folders:
     - "README.md"
+    - "figures"    
   external_files: []  
 - project_name: cortex_m4
   project_description: creat this peoject if user choose cortex-m4 template
@@ -96,6 +99,7 @@ example_projects:
     target_path_offset: ''
     files_and_folders:
     - "README.md"
+    - "figures"    
   external_files: []
 - project_name: cortex_m7
   project_description: creat this peoject if user choose cortex-m7 template
@@ -109,6 +113,7 @@ example_projects:
     target_path_offset: ''
     files_and_folders:
     - "README.md"
+    - "figures"    
   external_files: []
 - project_name: scons_project
   project_description: creat this peoject if user choose cortex-m0-scons template
@@ -122,4 +127,5 @@ example_projects:
     target_path_offset: ''
     files_and_folders:
     - "README.md"
+    - "figures"    
   external_files: []
