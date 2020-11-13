@@ -100,3 +100,22 @@
 2. 参考文档 《开发板支持包设计规范》和 《开发板支持包制作向导》两个文档创建开发板支持包。
 3. 编译下载验证完毕后，向 RT-Thread 提交 BSP 支持包。 
 
+# 从现有 RT-Thread BSP 制作 Studio 工程
+
+以 `rt-thread\bsp\stm32\stm32f103-onenet-nbiot` bsp 工程为例。
+
+1. 使用 Studio 创建一个 m3 的模板工程；
+
+2. 在 `rt-thread\bsp\stm32\stm32f103-onenet-nbiot` 目录下使用 env 工具执行命令 `scons --dist` 进行打包：
+
+   ![end](figures/scons-1.png)
+
+3. 复制 dist 文件夹工程内所有文件到模板工程目录下，相同文件直接替换，模板工程目录下的多余文件直接删除掉：
+
+   ![end](figures/scons-2.png)
+
+4. 在模板工程下使用 env 工具执行命令 `scons --target=eclipse --project-name=stm32f103-onenet-nbiot`：
+
+   ![end](figures/scons-3.png)
+
+5. 在 Studio 中编译模板工程，编译成功后清除编译产物，然后提交 BSP 支持包。
