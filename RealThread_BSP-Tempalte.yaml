@@ -1,6 +1,6 @@
 ---
 yaml_version: 3
-pkg_version: 1.0.0
+pkg_version: 1.1.0
 pkg_vendor: RealThread
 pkg_type: Board_Support_Packages
 board:
@@ -9,8 +9,8 @@ board:
   vendor: RealThread
   description_zh: RT-Thread Studio 板级支持包模板工程
   description_en: RT-Thread Studio Board Support Project Template
-  small_image: []
-  large_image: []
+  small_image: documents/images/board_small.png
+  large_image: documents/images/board_large.png
   sale_contact_cn: sale_contact_cn
   sale_contact_global: sale_contact_global
   buy_url_cn: buy_url_cn
@@ -32,17 +32,17 @@ chip:
   source_freq: '8000000'
   target_freq: '480000000'
   uart_name: UART2
-docs: 
-- file: []
-  title: 快速上手
+docs:
+- file: documents/manuals/UM3004-RT-Thread-IoT Board.pdf
+  title: Rt-Thread IoT Board
   category: manual
-- file: []
-  title: Datasheet
+- file: documents/sheet/STM32L475xx Datasheet.pdf
+  title: STM32L475xx Datasheet
   category: sheet
 features: 
-- xxx
+- empty
 features_zh:
-- xxx
+- 空工程
 template_projects:
 - project_name: cortex_m3
   project_description: creat this peoject if user choose cortex-m3 template
